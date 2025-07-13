@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import AnimatedSection from './AnimatedSection';
+import ImageCarousel from './ImageCarousel';
 
 interface Project {
   id: string;
@@ -18,7 +19,7 @@ interface Project {
   subtitle: string;
   description: string; // 프로젝트 설명
   responsibilities: string; // 담당 작업
-  image: string;
+  images: string[]; // 이미지 배열로 변경
   technologies: string[];
   period: string;
   impact: string[]; // 주요성과
@@ -39,7 +40,7 @@ export default function Projects() {
         '다양한 물품의 배송접수 기능, 실시간 결제, 현재 배송 현황, 상태 및 기사 위치를 손쉽게 확인할 수 있는 B2B서비스입니다.',
       responsibilities:
         '기존 퀵, 택배접수 UI의 리뉴얼 및 편의 기능 추가, 코드 리팩토링, 최적화를 담당하였습니다.',
-      image: '/placeholder.svg?height=300&width=400&text=Toodee+UI+Renewal',
+      images: ['/assets/toodee-main.webp', '/assets/toodee-order-rz.webp'],
       technologies: [
         'React',
         'Next.js',
@@ -68,7 +69,7 @@ export default function Projects() {
         '현재 KT M&S와 협력중에 있으며 단말기 유통 관리, 요금제 계산, 퀵서비스 연동 등 다양한 기능을 제공하는 B2B서비스입니다.',
       responsibilities:
         'Vuejs 기반 레거시 서비스의 UI/UX 개선 및 내부 로직 개선 작업 및 범용 컨설팅 서비스를 위한 설계 변경을 진행하였습니다.',
-      image: '/placeholder.svg?height=300&width=400&text=Coconuts+Renewal',
+      images: ['/assets/coconuts-estimate.webp'],
       technologies: [
         'React',
         'Vue.js',
@@ -94,7 +95,7 @@ export default function Projects() {
         'vlok client SDK의 사용량에 대한 결제 및 토큰 발급, 사용량 모니터링 기능을 담은 B2C 서비스입니다.',
       responsibilities:
         'SDK의 사용량에 대한 결제 및 토큰 발급, 사용량 모니터링이 가능한 B2C 서비스의 제작을 담당하였습니다.',
-      image: '/placeholder.svg?height=300&width=400&text=VLOC+Console',
+      images: ['/assets/vloc-console-resized.webp'],
       technologies: [
         'React',
         'Next.js',
@@ -120,7 +121,7 @@ export default function Projects() {
         'VLOC Client SDK 의 화상통화 기능을 체험할 수 있는 화상통화 서비스입니다.',
       responsibilities:
         'VLOC Client SDK 의 화상통화 기능을 체험할 수 있는 화상통화 서비스입니다.',
-      image: '/placeholder.svg?height=300&width=400&text=Larla+Platform',
+      images: ['/assets/vloc-larla.webp', '/assets/vloc-larla-room-rz.webp'],
       technologies: [
         'React',
         'Next.js',
@@ -177,17 +178,18 @@ export default function Projects() {
               delay={index * 150}
             >
               <Card className="flex flex-col lg:flex-row w-full lg:min-h-[40rem] overflow-hidden shadow-lg">
-                {/* 이미지 섹션 */}
-                <div className="lg:w-2/5 aspect-video lg:aspect-auto bg-gray-200 overflow-hidden">
-                  <img
-                    src={project.image || '/placeholder.svg'}
+                {/* 이미지 섹션 - ImageCarousel 사용 */}
+                <div className="lg:w-1/2 aspect-video lg:aspect-auto bg-gray-200 overflow-hidden">
+                  <ImageCarousel
+                    images={project.images}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    autoSlideInterval={4000} // 4초 간격
+                    className="w-full h-full"
                   />
                 </div>
 
                 {/* 콘텐츠 섹션 */}
-                <div className="lg:w-3/5 flex flex-col">
+                <div className="lg:w-1/2 flex flex-col">
                   <CardHeader>
                     {/* 1. 제목 */}
                     <CardTitle className="text-2xl lg:text-3xl mb-4">
@@ -270,6 +272,22 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
+
+                    {/* 라이브 사이트 링크 */}
+                    {project.liveUrl && (
+                      <div className="pt-4">
+                        <Button asChild variant="outline">
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            라이브 사이트
+                          </a>
+                        </Button>
+                      </div>
+                    )}
                   </CardContent>
                 </div>
               </Card>
