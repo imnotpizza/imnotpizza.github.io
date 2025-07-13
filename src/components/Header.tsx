@@ -1,42 +1,41 @@
-"use client"
+'use client';
 
-import { useState, useEffect, useRef } from "react"
-import { Menu, X } from "lucide-react"
+import { useState, useEffect, useRef } from 'react';
+import { Menu, X } from 'lucide-react';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [showHeader, setShowHeader] = useState(true)
-  const lastScrollY = useRef(0)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
+      const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY.current && currentScrollY > 40) {
         // Down scroll
-        setShowHeader(false)
+        setShowHeader(false);
       } else {
         // Up scroll
-        setShowHeader(true)
+        setShowHeader(true);
       }
-      lastScrollY.current = currentScrollY
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      lastScrollY.current = currentScrollY;
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ]
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
+  ];
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    element?.scrollIntoView({ behavior: "smooth" })
-    setIsMenuOpen(false)
-  }
+    const element = document.querySelector(href);
+    element?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
 
   return (
     <header
@@ -44,7 +43,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold text-gray-900">{"<Dev />"}</div>
+          <div className="text-2xl font-bold text-gray-900">{'<Dev />'}</div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
@@ -60,7 +59,10 @@ export default function Header() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -81,5 +83,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }

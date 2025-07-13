@@ -1,53 +1,92 @@
 import AnimatedSection from './AnimatedSection';
-import { Card, CardContent } from '@/components/ui/card';
+import SkillSection from './SkillsSection';
 
 export default function About() {
-  const achievements = [
+  const hardSkills = [
     {
-      percentage: '30%',
-      title: '퍼포먼스 향상',
-      description:
-        '레거시 코드 개선 및 테스트 추가로 코드 수 18% 감소, 핵심 로직 커버리지 100% 달성',
+      title: 'Frontend Development',
+      items: [
+        {
+          name: 'Frontend Development',
+          description: [
+            'Javascript, Typescript 기반 React, Vue.js, Next.js 등 모던 라이브러리, 프레임워크를 활용한 서비스 개발 경험 5년 이상',
+          ],
+        },
+        {
+          name: 'Build & Bundle',
+          description: [
+            'Webpack, Vite, Rollup 등 번들러 커스터마이징을 통한 최적화 및 라이브러리 제작 및 배포 경험',
+          ],
+        },
+        {
+          name: 'Testing',
+          description: [
+            'Jest, Vitest, React Testing Library 활용한 체계적 단위테스트 작성 및 테스트 커버리지 관리',
+          ],
+        },
+        {
+          name: 'Performance Optimization',
+          description: [
+            'Lighthouse 사용한 Web Vitals 지표 측정 및 개선',
+            'Web Profiling 등을 활용한 프레임 드랍 원인 분석 및 개선 경험',
+          ],
+        },
+      ],
     },
     {
-      percentage: '80%',
-      title: 'API 호출 최적화',
-      description:
-        'Next.js Server Cache, React-Query 등 API 캐싱으로 중복 API 호출 수 대폭 감소',
+      title: 'DevOps',
+      items: [
+        {
+          name: '배포환경',
+          description: [
+            'EC2, Docker, Nginx, Vercel 활용한 배포환경 구축 및 최적화 경험',
+          ],
+        },
+        {
+          name: 'CI/CD',
+          description: [
+            'GitHub Actions 활용한 자동화된 빌드, 테스트, 배포 파이프라인 구축 및 운영',
+          ],
+        },
+      ],
     },
     {
-      percentage: '80%',
-      title: '개발 효율성 증대',
-      description:
-        'Chat GPT, V0 등 각종 AI 툴 활용하여 단순작업 소요시간 대폭 단축',
-    },
-    {
-      percentage: '80%',
-      title: '배포시간 단축',
-      description:
-        '기존 인프라 배포환경 개선하여 Node 호환성 이슈 해결 (5분 → 1분)',
+      title: 'AI Automation',
+      items: [
+        {
+          name: 'AI 자동화',
+          description: [
+            'Copilot for Business 활용한 단순 반복작업 소요시간 90% 이상 단축',
+            'AI 도구를 활용한 개발 생산성 향상',
+          ],
+        },
+      ],
     },
   ];
 
-  const techSkills = [
+  const softSkills = [
     {
-      title: 'Javascript, Typescript 주력 언어로 개발 경험 5년 이상',
-      description: '',
+      title: 'FE Team Leader',
+      items: [
+        {
+          name: '팀 리더십',
+          description: [
+            '프론트엔드 팀 리더로서 일정 관리, 코드리뷰, 기술 스택 관리 등 팀 운영 및 멘토링 경험',
+          ],
+        },
+      ],
     },
     {
-      title:
-        'React.js, Vue.js, Next.js 모던 라이브러리/프레임워크 기반 개발 경험 및 SSR 기반 서비스의 개발 및 최적화 경험',
-      description: '',
-    },
-    {
-      title:
-        'Webpack, Vite, Rollup 활용한 번들러 커스터마이징을 통한 배포 및 최적화 경험',
-      description: '',
-    },
-    {
-      title:
-        'EC2, Linux, Nginx, Docker, Github Actions 등 사용한 배포 세팅 및 CI/CD 구축 경험',
-      description: '',
+      title: 'Cooperation',
+      items: [
+        {
+          name: '크로스 펑셔널 협업',
+          description: [
+            '백엔드, 디자인, 기획팀과의 원활한 협업을 통한 프로젝트 성공적 완수',
+            '크로스 펑셔널 팀워크 경험',
+          ],
+        },
+      ],
     },
   ];
 
@@ -63,102 +102,36 @@ export default function About() {
           </div>
         </AnimatedSection>
 
-        <div className="flex flex-col lg:flex-row justify-center items-start gap-12 lg:gap-16">
-          {/* Content */}
-          <AnimatedSection
-            animation="fade-left"
-            delay={400}
-            className="lg:w-2/3"
-          >
-            <div className="space-y-8">
-              {/* Main Description */}
-              <div className="space-y-2 text-gray-700 text-3xl font-bold">
-                <p>반복적이고 불필요한 작업을 최소화하는 대신,</p>
-                <p>서비스에 진정으로 필요한 일에 집중하는 것과</p>
-                <p>그 과정을 좋아하는 프론트엔드 개발자입니다.</p>
-              </div>
-
-              {/* Technical Skills */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-6">
-                  기술 스택 요약
-                </h3>
-                <div className="grid gap-4">
-                  {techSkills.map((skill, index) => (
-                    <AnimatedSection
-                      key={index}
-                      animation="fade-up"
-                      delay={index * 100 + 400}
-                    >
-                      <Card className="border-2 border-gray-200 hover:border-green-300 transition-colors duration-300">
-                        <CardContent className="p-6">
-                          <div className="flex items-center gap-6">
-                            {/* Icon Circle */}
-                            <div className="flex-shrink-0">
-                              <div className="w-20 h-20 rounded-full border-4 border-green-500 flex items-center justify-center bg-green-50">
-                                <span className="text-2xl">💻</span>
-                              </div>
-                            </div>
-
-                            {/* Content */}
-                            <div className="flex-1">
-                              <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                                {skill.title}
-                              </h4>
-                              <p className="text-gray-600 text-lg leading-relaxed">
-                                {skill.description}
-                              </p>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </AnimatedSection>
-                  ))}
-                </div>
-              </div>
-
-              {/* Achievements */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-6">
-                  주요 성과 요약
-                </h3>
-                <div className="grid gap-4">
-                  {achievements.map((achievement, index) => (
-                    <AnimatedSection
-                      key={index}
-                      animation="fade-up"
-                      delay={index * 100 + 600}
-                    >
-                      <Card className="border-2 border-gray-200 hover:border-blue-300 transition-colors duration-300">
-                        <CardContent className="p-6">
-                          <div className="flex items-center gap-6">
-                            {/* Percentage Circle */}
-                            <div className="flex-shrink-0">
-                              <div className="w-20 h-20 rounded-full border-4 border-blue-500 flex items-center justify-center bg-blue-50">
-                                <span className="text-2xl font-bold text-blue-600">
-                                  {achievement.percentage}
-                                </span>
-                              </div>
-                            </div>
-
-                            {/* Content */}
-                            <div className="flex-1">
-                              <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                                {achievement.title}
-                              </h4>
-                              <p className="text-gray-600 text-lg leading-relaxed">
-                                {achievement.description}
-                              </p>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </AnimatedSection>
-                  ))}
-                </div>
-              </div>
+        <div className="space-y-16">
+          {/* Main Description */}
+          <AnimatedSection animation="fade-up" delay={200}>
+            <div className="space-y-2 text-gray-700 text-2xl lg:text-3xl font-bold text-center">
+              <p>반복적이고 불필요한 작업을 최소화하는 대신,</p>
+              <p>서비스에 진정으로 필요한 일에 집중하는 것과</p>
+              <p>그 과정을 좋아하는 프론트엔드 개발자입니다.</p>
             </div>
           </AnimatedSection>
+
+          {/* 기술스택 섹션 */}
+          <div className="space-y-12">
+            {/* Hard Skills */}
+            <SkillSection
+              title="Hard Skills"
+              skills={hardSkills}
+              colorTheme="blue"
+              gridCols="lg:grid-cols-3"
+              baseDelay={400}
+            />
+
+            {/* Soft Skills */}
+            <SkillSection
+              title="Soft Skills"
+              skills={softSkills}
+              colorTheme="green"
+              gridCols="lg:grid-cols-3"
+              baseDelay={800}
+            />
+          </div>
         </div>
       </div>
     </section>
