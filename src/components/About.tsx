@@ -21,14 +21,13 @@ export default function About() {
         {
           name: 'Testing',
           description: [
-            'Jest, Vitest, React Testing Library 활용한 체계적 단위테스트 작성 및 테스트 커버리지 관리',
+            'Jest, Vitest, React Testing Library, Cypress 활용한 체계적 단위테스트, E2E 테스트 작성 및 관리 경험',
           ],
         },
         {
           name: 'Performance Optimization',
           description: [
-            'Lighthouse 사용한 Web Vitals 지표 측정 및 개선',
-            'Web Profiling 등을 활용한 프레임 드랍 원인 분석 및 개선 경험',
+            'Lighthouse 사용한 Web Vitals 지표 측정 및 Network Waterfall Chart 분석 및 개선 통한 로드시간, 퍼포먼스 개선 경험',
           ],
         },
       ],
@@ -39,13 +38,14 @@ export default function About() {
         {
           name: '배포환경',
           description: [
-            'EC2, Docker, Nginx, Vercel 활용한 배포환경 구축 및 최적화 경험',
+            'Ubuntu(NCP), Nginx, Vercel, Docker 등 활용한 배포환경 구축 및 최적화 경험',
           ],
         },
         {
           name: 'CI/CD',
           description: [
-            'GitHub Actions 활용한 자동화된 빌드, 테스트, 배포 파이프라인 구축 및 운영',
+            'GitHub Actions 활용한 CI/CD 파이프라인 구축 및 운영',
+            'Slack Webhook 을 활용한 배포 알림 시스템 구축',
           ],
         },
       ],
@@ -57,7 +57,6 @@ export default function About() {
           name: 'AI 자동화',
           description: [
             'Copilot for Business 활용한 단순 반복작업 소요시간 90% 이상 단축',
-            'AI 도구를 활용한 개발 생산성 향상',
           ],
         },
       ],
@@ -69,21 +68,10 @@ export default function About() {
       title: 'FE Team Leader',
       items: [
         {
-          name: '팀 리더십',
+          name: '',
           description: [
-            '프론트엔드 팀 리더로서 일정 관리, 코드리뷰, 기술 스택 관리 등 팀 운영 및 멘토링 경험',
-          ],
-        },
-      ],
-    },
-    {
-      title: 'Cooperation',
-      items: [
-        {
-          name: '크로스 펑셔널 협업',
-          description: [
-            '백엔드, 디자인, 기획팀과의 원활한 협업을 통한 프로젝트 성공적 완수',
-            '크로스 펑셔널 팀워크 경험',
+            '프론트엔드 팀 리더로서 일정 관리, 코드리뷰, R&R 지정 기술 스택 관리 등 팀 운영 경험',
+            '백엔드, 디자인, 기획팀과의 협업을 통한 불필요한 작업 지연 및 혼란 방지',
           ],
         },
       ],

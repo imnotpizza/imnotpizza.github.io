@@ -57,8 +57,9 @@ export default function Projects() {
         'vitest, react-testing-library 사용한 단위테스트, 통합테스트 작성, 핵심로직 커버리지 100% 달성',
         'Mock Service Worker 2.x으로 마이그레이션 및 Storybook, Vitest와 통합, 일관성 있는 모킹환경 구축',
         '투디 홈페이지의 Web Vitals 지표 개선하여 로드 속도 30%, LCP 48%감소, FCP 60%감소',
+        '에러 분류 및 디버깅 데이터 전송을 통한 이슈 추적 위해 Sentry 도입, CS이슈 처리속도 평균 30% 증가'
       ],
-      liveUrl: 'https://toodee.co.kr',
+      liveUrl: 'https://toodee.kr/',
       featured: true,
     },
     {
@@ -66,9 +67,9 @@ export default function Projects() {
       title: 'Coconuts 컨설팅',
       subtitle: '레거시 시스템 리뉴얼',
       description:
-        '현재 KT M&S와 협력중에 있으며 단말기 유통 관리, 요금제 계산, 퀵서비스 연동 등 다양한 기능을 제공하는 B2B서비스입니다.',
+        '현재 KT M&S와 협력중에 있으며 단말기 유통 관리, 요금계산기, 퀵서비스 연동 등 다양한 기능을 제공하는 B2B서비스입니다.',
       responsibilities:
-        'Vuejs 기반 레거시 서비스의 UI/UX 개선 및 내부 로직 개선 작업 및 범용 컨설팅 서비스를 위한 설계 변경을 진행하였습니다.',
+        '요금계산기 서비스의 모듈화 작업 및 리팩토링, E2E 테스트 구축하여 수정과 변경에 용이한 프로젝트로 개선하였습니다',
       images: ['/assets/coconuts-estimate.webp'],
       technologies: [
         'React',
@@ -77,14 +78,13 @@ export default function Projects() {
         'Webpack',
         'Module Federation',
         'Pinia',
-        'Mermaid',
       ],
       period: '2024.03 - 2025.07',
       impact: [
-        'Webpack Module Federation 사용하여 Vue기반 레거시 코드를 React 기반 코드로 전환할 수 있도록 모듈 시스템 구축',
-        'Webpack 사용한 React 프로젝트 번들링 및 배포환경 구축 및 캐시 설정으로 컨텐츠 로드 최적화',
-        'js 레거시 코드 ts로 마이그레이션 진행 및 mermaid 사용한 interface 시각화로 데이터 구조 가독성 향상',
-        'Vue Composition API, Pinia 사용한 마이크로 상태관리 기반의 구조 도입으로 코드개선',
+        '기존 요금, 결합할인 계산 관련 레거시 비즈니스로직 Flux 패턴, selector 패턴 기반으로 개선',
+        'Cypress Studio 기반 E2E 시나리오 테스트 도입하여 기능추가 시 QA 발생 및 추가 배포 양 50% 감소',
+        '요금계산기 서비스 Webpack Module Federation 기반 공용 모듈로 분리',
+        'Webpack 기반 React 프로젝트 번들링 구축, contenthash, minify 적용으로 로드속도 40% 증가',
       ],
     },
     {
