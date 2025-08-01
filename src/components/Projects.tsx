@@ -170,7 +170,7 @@ export default function Projects() {
         </AnimatedSection>
 
         {/* Projects Grid */}
-        <div ref={projectsRef} className="space-y-8">
+        <div ref={projectsRef} className="space-y-24">
           {projects.map((project, index) => (
             <AnimatedSection
               key={project.id}

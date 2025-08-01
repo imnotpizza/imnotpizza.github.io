@@ -24,79 +24,102 @@ body {
   }
 }
 
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Animation Classes - 모든 애니메이션을 fade-up으로 통일 */
+.animate-fade-up-hidden {
+  opacity: 0;
+  transform: translateY(30px);
 }
 
-@keyframes fadeLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.animate-fade-up-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.6s ease-out forwards;
 }
 
-@keyframes fadeRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.animate-fade-down-hidden {
+  opacity: 0;
+  transform: translateY(30px);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.animate-fade-down-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.6s ease-out forwards;
 }
 
-@keyframes scaleUp {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.animate-fade-left-hidden {
+  opacity: 0;
+  transform: translateY(30px);
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.animate-fade-left-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.6s ease-out forwards;
 }
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.animate-fade-right-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-fade-right-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-scale-up-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-scale-up-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Staggered Animation Classes */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.stagger-children.animate > *:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.stagger-children.animate > *:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.stagger-children.animate > *:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.stagger-children.animate > *:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.stagger-children.animate > *:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.stagger-children.animate > *:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+.stagger-children.animate > * {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Highlight background animation */
@@ -138,102 +161,6 @@ body {
 
 .highlight-number.counting {
   animation: countUp 0.3s ease-out;
-}
-
-/* Animation Classes */
-.animate-fade-up-hidden {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.animate-fade-up-visible {
-  opacity: 1;
-  transform: translateY(0);
-  animation: fadeUp 0.6s ease-out forwards;
-}
-
-.animate-fade-down-hidden {
-  opacity: 0;
-  transform: translateY(-30px);
-}
-
-.animate-fade-down-visible {
-  opacity: 1;
-  transform: translateY(0);
-  animation: fadeDown 0.6s ease-out forwards;
-}
-
-.animate-fade-left-hidden {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-
-.animate-fade-left-visible {
-  opacity: 1;
-  transform: translateX(0);
-  animation: fadeLeft 0.6s ease-out forwards;
-}
-
-.animate-fade-right-hidden {
-  opacity: 0;
-  transform: translateX(30px);
-}
-
-.animate-fade-right-visible {
-  opacity: 1;
-  transform: translateX(0);
-  animation: fadeRight 0.6s ease-out forwards;
-}
-
-.animate-fade-in-hidden {
-  opacity: 0;
-}
-
-.animate-fade-in-visible {
-  opacity: 1;
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-.animate-scale-up-hidden {
-  opacity: 0;
-  transform: scale(0.9);
-}
-
-.animate-scale-up-visible {
-  opacity: 1;
-  transform: scale(1);
-  animation: scaleUp 0.6s ease-out forwards;
-}
-
-/* Staggered Animation Classes */
-.stagger-children > * {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-
-.stagger-children.animate > *:nth-child(1) {
-  transition-delay: 0.1s;
-}
-.stagger-children.animate > *:nth-child(2) {
-  transition-delay: 0.2s;
-}
-.stagger-children.animate > *:nth-child(3) {
-  transition-delay: 0.3s;
-}
-.stagger-children.animate > *:nth-child(4) {
-  transition-delay: 0.4s;
-}
-.stagger-children.animate > *:nth-child(5) {
-  transition-delay: 0.5s;
-}
-.stagger-children.animate > *:nth-child(6) {
-  transition-delay: 0.6s;
-}
-
-.stagger-children.animate > * {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 @layer base {
