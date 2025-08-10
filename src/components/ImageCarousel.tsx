@@ -74,7 +74,7 @@ export default function ImageCarousel({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef(null);
 
   // 무한 루프를 위한 확장된 이미지 배열 생성
   const extendedImages = [...images, ...images, ...images];
