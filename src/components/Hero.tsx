@@ -15,9 +15,9 @@ export default function Hero() {
             <div className="flex justify-center lg:block">
               {/* Mobile: Circular image, Desktop: Rectangle image */}
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-MbTBIrkoB6yGi4f1slktzrPNV3LxsL.png"
+                src="/assets/mypic.webp"
                 alt="Profile"
-                className="w-[20rem] h-[20rem] p-6 bg-white shadow-lg rounded-full object-cover
+                className="w-[20rem] h-[20rem] bg-white shadow-lg rounded-full object-cover
                          lg:w-full lg:h-auto lg:p-0 lg:rounded-2xl lg:transform lg:hover:scale-105 lg:transition-transform lg:duration-500"
               />
             </div>
@@ -30,12 +30,13 @@ export default function Hero() {
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-600 mb-8">
-              본질에 집중하여 회사의 성장에 기여하는 개발자입니다
+              본질에 집중하여 회사의 빠른 성장에 기여하고자 하는 개발자입니다
             </p>
 
             <p className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto lg:mx-0">
-              반복적이고 불필요한 작업을 최소화하는 대신, 서비스에 진정으로 필요한 일에 집중하는 것과 그 과정을 좋아하는
-              프론트엔드 개발자입니다.
+              서비스의 성공과 성장에 실질적으로 기여하는 '본질'에 집중할 수 있는 환경을 만드는 것을 가장 중요하게
+              생각하며, 리팩토링, 디자인시스템, 단위테스트 및 E2E 테스트를 도입하여 QA 소요시간 평균 55%, UI 작업
+              소요시간 최대 80% 단축에 성공하였습니다.
             </p>
           </AnimatedSection>
         </div>
