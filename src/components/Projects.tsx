@@ -63,7 +63,7 @@ export default function Projects() {
       description: "마이리베는 대리점, 판매점의 단말 리베이트 관리, 개통관리, 상담기능 등을 제공하는 B2B 서비스입니다.",
       responsibilities:
         "단말 리베이트 정책 등록 및 개통 요청 작업을 담당, 프로젝트 기획, UI 설계 등 관여하여 MVP 프로젝트 출시에 성공하였습니다.",
-      images: ["/assets/toodee-main.webp"], // 실제 이미지로 교체 필요
+      images: ["/assets/myrebe.png"], // 실제 이미지로 교체 필요
       technologies: ["Next.js", "React 19", "TypeScript", "Next-Auth", "Vercel", "GitHub Actions"],
       period: "2025.03 - 2025.09",
       impact: [
@@ -71,23 +71,6 @@ export default function Projects() {
         "JWT 인증을 Next-Auth 기반으로 구축하여 CSRF 방지 작업 등 보안 중심적인 인증 체계 구축",
         "단말 시리즈/목록 관련 API들의 중복 호출 문제를 Data Cache 기법 적용하여 API 호출수 95%이상 감소",
         "Vercel, Github Action 기반 CI/CD 및 클라우드 배포 환경 구축",
-      ],
-    },
-    {
-      id: "o2plus-design-system",
-      title: "O2pluss Design System",
-      subtitle: "오투플러스 범용 디자인 시스템",
-      description: "오투플러스 내 모든 프로젝트에 범용으로 사용되는 디자인 시스템을 제작하였습니다.",
-      responsibilities:
-        "재사용 가능한 컴포넌트 작성, 문서화, 테스트 자동화 등을 통해 UI 작업공수 평균 70% 감소를 달성하였습니다.",
-      images: ["/assets/coconuts-estimate.webp"], // 실제 이미지로 교체 필요
-      technologies: ["React", "TypeScript", "Vite", "Storybook", "GitHub Actions", "GitHub Packages"],
-      period: "2024.02 - 2024.12",
-      impact: [
-        "재사용/커스터마이징 가능한 컴포넌트, 에니메이션 도입으로 UI 작업공수 평균 30~50% 감소",
-        "vite를 사용한 모듈 번들로 다양한 환경 (SSR, cjs, esm)에서 사용가능한 라이브러리 빌드",
-        "storybook 사용한 예제 작성 및 문서화 AI 사용한 자동화로 관련 작업시간 80%감소",
-        "github actions, github packages 사용한 배포 CI/CD 파이프라인 구축",
       ],
     },
     {
@@ -105,21 +88,6 @@ export default function Projects() {
         "Webpack Module Federation 사용하여 레거시 Vue프로젝트 점진적으로 React로 개선 환경 구축",
         "Cypress E2E 테스트 도입으로 시나리오 테스트 자동화로 반복 검증 작업 13% 감소",
         "Webpack 기반 React 프로젝트 구축, contenthash 적용하여 페이지 번들 로드 속도 50%증가, 안정적 cache busting 구축",
-      ],
-    },
-    {
-      id: "toodee-deployment",
-      title: "오늘의 배송 Toodee: 배포환경 및 CI/CD 개선",
-      subtitle: "배포 환경 최적화",
-      description: "기존의 비효율적인 투디의 배포환경을 최적의 구조로 개선하였습니다.",
-      responsibilities: "기존 프로젝트 배포방식을 standalone 배포방식으로 변경하여 배포 효율성을 크게 개선하였습니다.",
-      images: ["/assets/toodee-order-rz.webp"],
-      technologies: ["Next.js", "Docker", "GitHub Actions", "Slack Webhook"],
-      period: "2024.12 - 2025.04",
-      impact: [
-        "기존 next start 사용한 배포 방식 standalone 방식으로 개선하여 빌드폴더 용량 65%감소",
-        "기존의 빌드 커맨드 개선하여 배포시간 최대 6분에서 평균 1.5분으로 감소",
-        "Slack Webhook 추가하여 배포 성공/실패시 알림기능 추가",
       ],
     },
     {
@@ -154,33 +122,6 @@ export default function Projects() {
         "Zustand와 Presentational/Container 패턴 적용하여 상태와 UI의 분리",
         "Selector 패턴, React.Memo 사용한 컴포넌트 캐싱으로 화상통화 실행 중 프레임 드랍이슈 해결 및 메모리 소모량 34% 감소",
         "사용자 화면 highlight UI에 디바운싱 사용하여 렌더링 성능, UX 개선",
-      ],
-    },
-    {
-      id: "editor-2-0",
-      title: "Editor 2.0",
-      subtitle: "미니스쿨 화상수업 교재 제작 에디터 툴",
-      description:
-        "미니스쿨 화상수업 서비스의 교재 제작에 사용되는 에디터 툴 서비스입니다. 레거시 Editor를 리뉴얼하고 최신 기술스택을 적용한 프로젝트입니다.",
-      responsibilities: "기존 클래스 컴포넌트 기반 레거시 코드 및 라이브러리를 최신 스펙으로 리뉴얼하였습니다.",
-      images: ["/assets/vloc-console-resized.webp"], // 실제 이미지로 교체 필요
-      technologies: [
-        "React",
-        "Redux Toolkit",
-        "TypeScript",
-        "Webpack",
-        "Jest",
-        "React Testing Library",
-        "Storybook",
-        "ESBuild",
-      ],
-      period: "2021.06 - 2021.12",
-      impact: [
-        "기존 레거시 Redux 관련 로직 개선 (Redux Toolkit, useSelector 도입)",
-        "Webpack 기반 React 프로젝트 빌드 및 번들링 구조 구축",
-        "Jest, React Testing Library 사용한 단위테스트 작성",
-        "ESBuild-loader 적용하여 로드시간 평균 5.5초에서 2초 가량으로 감소",
-        "Storybook 사용한 컴포넌트 UI 테스트, 문서화 도입",
       ],
     },
   ]
