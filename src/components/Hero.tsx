@@ -17,8 +17,7 @@ export default function Hero() {
               <img
                 src="/assets/mypic.webp"
                 alt="Profile"
-                className="w-[20rem] h-[20rem] bg-white shadow-lg rounded-full object-cover
-                         lg:w-full lg:h-auto lg:p-0 lg:rounded-2xl lg:transform lg:hover:scale-105 lg:transition-transform lg:duration-500"
+                className="w-[30rem] h-[30rem] bg-white shadow-lg rounded-full object-cover"
               />
             </div>
           </AnimatedSection>
@@ -35,8 +34,7 @@ export default function Hero() {
 
             <p className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto lg:mx-0">
               서비스의 성공과 성장에 실질적으로 기여하는 '본질'에 집중할 수 있는 환경을 만드는 것을 가장 중요하게
-              생각하며, 리팩토링, 디자인시스템, 단위테스트 및 E2E 테스트를 도입하여 QA 소요시간 평균 55%, UI 작업
-              소요시간 최대 80% 단축에 성공하였습니다.
+              생각하며, 이를 통해 회사에 최고의 성과를 내고자 합니다. <br />
             </p>
           </AnimatedSection>
         </div>

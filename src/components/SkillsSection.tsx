@@ -71,10 +71,10 @@ export default function SkillSection({
                       key={itemIndex}
                       className={`border-l-2 ${colors.leftBorder} pl-4`}
                     >
-                      <h5 className="text-lg font-semibold text-gray-800 mb-2">
+                      <h5 className="text-xl font-semibold text-gray-800 mb-2">
                         {item.name}
                       </h5>
-                      <div className="text-gray-600 text-sm leading-relaxed space-y-1">
+                      <div className="text-gray-600 text-lg leading-relaxed space-y-1">
                         {item.description.map((descriptionItem, descIndex) => (
                           <p key={descIndex}>- {descriptionItem}</p>
                         ))}

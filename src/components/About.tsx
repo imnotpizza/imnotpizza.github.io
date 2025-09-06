@@ -18,6 +18,7 @@ export default function About() {
           description: [
             "Selector Pattern, Flux Pattern 등 활용한 프로젝트 리팩토링으로 유지보수성 향상 및 성능 최적화 경험",
             "Webpack Module Federation을 활용한 레거시 Vue 프로젝트에서 React로의 점진적 전환 환경 구축",
+            "재사용 가능한 컴포넌트 작성 및 문서화로 UI 작업 공수 평균 70% 감소",
           ],
         },
         {
@@ -40,20 +41,6 @@ export default function About() {
             "Webpack, Vite, Rollup 등 번들러 커스터마이징을 통한 최적화 및 라이브러리 빌드 환경 구축",
           ],
         },
-        {
-          name: "Monitoring & Security",
-          description: [
-            "Sentry 고도화를 통한 이슈 분석 및 해결 시간 단축, CS 이슈 처리 속도 30% 증가",
-            "JWT 인증을 Next-Auth 기반으로 구축하여 CSRF 방지 등 보안 중심적인 인증 체계 구축",
-          ],
-        },
-        {
-          name: "Design System",
-          description: [
-            "재사용 가능한 컴포넌트 작성 및 문서화로 UI 작업 공수 평균 70% 감소",
-            "Vite 기반 라이브러리 빌드 및 Github Packages 사용 배포 자동화 구축",
-          ],
-        },
       ],
     },
     {
@@ -62,28 +49,27 @@ export default function About() {
         {
           name: "Deployment",
           description: [
-            "Next.js standalone 배포 방식으로 개선하여 배포시간 개선 경험",
-            "Docker Multi-Stage Build 적용하여 빌드 시간 40% 감소, 이미지 용량 80% 감소",
+            "AWS EC2, Vercel, Nginx 등을 활용한 서비스 배포 및 운영 경험",
+            "Next.js standalone 배포 방식으로 개선하여 서버 부하, 배포 속도 향상 경험",
           ],
         },
         {
           name: "CI/CD Pipeline",
           description: [
             "GitHub Actions, Vercel 기반 CI/CD 파이프라인 구축 및 운영",
-            "Slack Webhook을 활용한 배포 알림 시스템 구축",
           ],
         },
 
       ],
     },
     {
-      title: "AI & Automation",
+      title: "AI Automation",
       items: [
         {
           name: "AI Automation",
           description: [
             "AI 자동화 툴 도입으로 API 연동 관련 코드 작성 시간 95% 이상 감소",
-            "Storybook 문서화에 AI 활용으로 관련 작업 시간 80% 감소",
+            "GitHub Copilot 등 AI 코딩 어시스턴트 활용",
           ],
         },
       ],
@@ -97,8 +83,8 @@ export default function About() {
         {
           name: "프론트엔드 팀 리드",
           description: [
-            "오투플러스 재직 중 실력을 인정받아 프론트엔드 팀 리드로 발탁",
-            "주간회의, 코드리뷰 등의 과정 개선",
+            "프론트엔드 팀 리드로 활동하여 기술적 이슈 가이드 및 솔루션 제공 경험",
+            "회의 진행 간소화 및 사전 습득 자료 공유로 동일 분량 대비 회의시간 감소",
             "팀원들의 개발 역량 향상을 위한 가이드 및 발표 세션 운영",
           ],
         },
