@@ -15,7 +15,7 @@ interface SkillSectionProps {
   title: string;
   skills: SkillGroup[];
   colorTheme: 'blue' | 'green';
-  gridCols: 'lg:grid-cols-3' | 'md:grid-cols-2';
+  gridCols: string;
   baseDelay: number;
 }
 
