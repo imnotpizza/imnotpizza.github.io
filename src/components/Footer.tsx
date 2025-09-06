@@ -8,7 +8,7 @@ export default function Footer() {
         <AnimatedSection animation="fade-up">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">{"<Dev />"}</h3>
+              <h3 className="text-2xl font-bold mb-4">{"<고보빈 />"}</h3>
               <p className="text-gray-400 mb-4">
                 Frontend Developer passionate about creating beautiful and functional web experiences.
               </p>

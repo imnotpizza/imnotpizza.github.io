@@ -17,7 +17,7 @@ export default function Hero() {
               <img
                 src="/assets/mypic.webp"
                 alt="Profile"
-                className="w-[30rem] h-[30rem] bg-white shadow-lg rounded-full object-cover"
+                className="w-[20rem] h-[20rem] bg-white shadow-lg rounded-full object-cover"
               />
             </div>
           </AnimatedSection>
